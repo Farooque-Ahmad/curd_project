@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .home-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .home-container h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #fff;
+        }
+
+        .home-container p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #ddd;
+            max-width: 600px;
+        }
+
+        .home-container a {
+            font-size: 1.2em;
+            color: #4CAF50;
+            text-decoration: none;
+            background-color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 10px;
+        }
+
+        .home-container a:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .home-container h1 {
+                font-size: 2.5em;
+            }
+
+            .home-container p {
+                font-size: 1em;
+            }
+
+            .home-container a {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .home-container h1 {
+                font-size: 2em;
+            }
+
+            .home-container p {
+                font-size: 0.9em;
+            }
+
+            .home-container a {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome to Our Website</h1>
+        <p>Your gateway to an amazing experience.</p>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+    </div>
+</body>
+</html>
